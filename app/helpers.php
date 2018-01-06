@@ -4,7 +4,7 @@ if(! function_exists('page_title')) { // permet d'afficher le titre celon la pag
 
     function page_title($title) { 
 
-        $base_title = 'M|o|H Communauté';
+        $base_title = config('app.name').' Communauté';
 
         if($title === '') {
             return $base_title;
