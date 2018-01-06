@@ -1,0 +1,57 @@
+body {
+    background-attachment: fixed;
+}
+
+.body{
+  padding-top: $espace-entre-menu_texte-acceuil;
+}
+
+#text_acceuil
+{
+  font-family:'Arial';
+  font-weight:bold;
+  color:#ffb841;
+}
+
+#text_acceuil_en
+{
+  font-family:'Arial';
+  font-weight:bold;
+  font-style:italic;
+  color:#e19d2a;
+}
+
+
+#separateur_acceuil
+{
+  font-family:'Arial';
+  font-size:28px;
+  font-weight:normal;
+  color:#c48214;
+}
+
+#fond_acceuil
+{
+  background-color: $fond-texte-acceuil-warzone;
+  border-radius: 10px;
+  opacity:0.97;
+}
+
+#acceuil_text
+{
+  margin-top:100px;
+  margin-bottom: 50px;
+}
+
+.taille60
+{
+  font-size:60px;
+}
+.taille48
+{
+  font-size:48px;
+}
+.taille28
+{
+  font-size:28px;
+}
