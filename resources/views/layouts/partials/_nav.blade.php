@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarsExample03">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item {{ set_active_route('root_path') }}"> <!-- Permet de definir l'onglet actif grace a la fonction situe dans helpers -->
-                <a class="nav-link" href="{{route('root_path')}}">Acceuil </a>
+                <a class="nav-link" href="{{ route('root_path') }}">Acceuil </a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Arma 3</a>
@@ -24,10 +24,10 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Contact</a>
+                <a class="nav-link {{ set_active_route('contact_path') }}" href="{{ route('contact_path') }}">Contact</a>
             </li>
             <li class="nav-item {{ set_active_route('about_path') }}">
-                <a class="nav-link " href="{{route('about_path')}}">About</a>
+                <a class="nav-link " href="{{ route('about_path') }}">About</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
