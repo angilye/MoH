@@ -6,7 +6,7 @@
 
     <div class="collapse navbar-collapse" id="navbarsExample03">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            <li class="nav-item {{ set_active_route('root_path') }}"> <!-- Permet de definir l'onglet actif grace a la fonction situe dans helpers -->
                 <a class="nav-link" href="{{route('root_path')}}">Acceuil <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
@@ -26,8 +26,8 @@
             <li class="nav-item">
                 <a class="nav-link disabled" href="#">Contact</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('about_path')}}">About</a>
+            <li class="nav-item {{ set_active_route('about_path') }}">
+                <a class="nav-link " href="{{route('about_path')}}">About</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
