@@ -4,9 +4,9 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+            <div class="col-md-8 offset-md-2 col-sm-10 offset-sm-1">
                 <h2>Get In Touch</h2>
-                <p class="text-muted">If you havin trouble, please contact with this form.</p>
+                <p class="text-muted">If you havin trouble, please contact us with this form.</p>
                 
                 <form action="#" method="POST">
                     <div class="form-group">
@@ -22,6 +22,7 @@
                     <div class="form-group">
                         <label for="raison" class="control-label">Raison :</label><br />
                         <select name="raison" id="raison" class="form-control" required="required">
+                            <option value="">-Aucune-</option>
                             <optgroup label="Site">
                             <option value="navigation">Navigation</option>
                             <option value="inscription">Inscription</option>
