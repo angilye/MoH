@@ -6,6 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <!-- Favicon sur l'onglet-->
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+
+
         <title>{{ page_title($title ?? '')}}</title> <!-- appel de la fonction dans le fichier "helpers" et test de si la variable title existe ( si non = '' )-->
 
         <!-- Bootstrap CSS -->
