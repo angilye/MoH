@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
+use App\Mail\ContactMessageCreated;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -14,6 +16,12 @@ class ContactController extends Controller
 
     public function store(ContactRequest $request)
     {
+        // regle de validation dans ContactRequest au niveau de APP
+        $mailable = new ContactMessageCreated($request->name, $request->email, $request->raison, $request->importance, $request->url, $request->message);
+
+        Mail::to('admin@moh.com')->send($mailable);
+
+        return 'done!';
         
     }
 }

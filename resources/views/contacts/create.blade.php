@@ -8,7 +8,7 @@
                 <h2>Get In Touch</h2>
                 <p class="text-muted">If you havin trouble, please contact us with this form.</p>
                 
-                <form action="{{ route('contact_path') }}" method="POST" novalidate>
+                <form action="{{ route('contact_path') }}" method="POST">
 
                     {{ csrf_field() }} <!-- Token de securité -->
 
@@ -42,26 +42,26 @@
 
                     <fieldset class="form-group ">
                         <div class="row">
-                            <legend class="col-form-label col-sm-2 pt-0 {{ $errors->has('email') ? 'text-danger' : '' }}">Importance:</legend>
+                            <legend class="col-form-label col-sm-2 pt-0 {{ $errors->has('importance') ? 'text-danger' : '' }}">Importance:</legend>
                             <div class="col-sm-10">
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input {{ $errors->has('importance') ? 'is-invalid' : '' }}" type="radio" name="importance" id="inlineRadio1" value="option1" required>
+                                    <input class="form-check-input {{ $errors->has('importance') ? 'is-invalid' : '' }}" type="radio" name="importance" id="inlineRadio1" value="1" required>
                                     <label class="form-check-label" for="inlineRadio1">1</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input {{ $errors->has('importance') ? 'is-invalid' : '' }}" type="radio" name="importance" id="inlineRadio2" value="option2">
+                                    <input class="form-check-input {{ $errors->has('importance') ? 'is-invalid' : '' }}" type="radio" name="importance" id="inlineRadio2" value="2">
                                     <label class="form-check-label" for="inlineRadio2">2</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input {{ $errors->has('importance') ? 'is-invalid' : '' }}" type="radio" name="importance" id="inlineRadio3" value="option3">
+                                    <input class="form-check-input {{ $errors->has('importance') ? 'is-invalid' : '' }}" type="radio" name="importance" id="inlineRadio3" value="3">
                                     <label class="form-check-label" for="inlineRadio3">3</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input {{ $errors->has('importance') ? 'is-invalid' : '' }}" type="radio" name="importance" id="inlineRadio4" value="option4">
+                                    <input class="form-check-input {{ $errors->has('importance') ? 'is-invalid' : '' }}" type="radio" name="importance" id="inlineRadio4" value="4">
                                     <label class="form-check-label" for="inlineRadio4">4</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input {{ $errors->has('importance') ? 'is-invalid' : '' }}" type="radio" name="importance" id="inlineRadio5" value="option5">
+                                    <input class="form-check-input {{ $errors->has('importance') ? 'is-invalid' : '' }}" type="radio" name="importance" id="inlineRadio5" value="5">
                                     <label class="form-check-label" for="inlineRadio5">5</label>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
 
                     <div class="form-group">
                         <label for="url" class="control-label {{ $errors->has('url') ? 'text-danger' : '' }}">URL:</label>
-                        <input type="url" name="url" id="url" class="form-control {{ $errors->has('url') ? 'is-invalid' : '' }}" required="required">
+                        <input type="url" name="url" id="url" class="form-control {{ $errors->has('url') ? 'is-invalid' : '' }}" >
                         {!! $errors->first('url', '<span class="invalid-feedback">:message</span>') !!}
                     </div>
                     
