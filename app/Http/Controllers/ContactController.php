@@ -21,7 +21,9 @@ class ContactController extends Controller
 
         Mail::to('admin@moh.com')->send($mailable);
 
-        return 'done!';
+        flashy()->success('Votre rapport a bien été transmis, merci de votre aide.');
+
+        return redirect()->route('root_path');
         
     }
 }

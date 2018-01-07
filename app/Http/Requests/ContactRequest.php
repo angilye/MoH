@@ -24,7 +24,7 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:5',
+            'name' => 'required|min:3',
             'email' => 'required|email',
             'raison' => 'required|not_in:0|in:navigation,inscription,connexion,glitch,bug,connexion-serv',
             'importance' => 'required|in:1,2,3,4,5',
