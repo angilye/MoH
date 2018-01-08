@@ -2,25 +2,25 @@
 # Hey Admin
 
 Un message de :
-- {{ $name }}
+- {{ $msg->name }}
 
 qui a pour email :
-- {{ $email }}
+- {{ $msg->email }}
 
 
 @component('mail::table')
 |                          |                 |
 | -------------            |:---------------:|
-| Raison du message :       | {{$raison}}        | 
-| Importance de celui-ci :  | {{$importance}}     | 
-| Url de l'image :           | {{$url}}            | 
+| Raison du message :       | {{$msg->raison}}        | 
+| Importance de celui-ci :  | {{$msg->importance}}     | 
+| Url de l'image :           | {{$msg->url}}            | 
 
 
 @endcomponent
 
 @component('mail::panel')
 
-{{ $msg }}
+{{ $msg->message }}
 
 @endcomponent
 
