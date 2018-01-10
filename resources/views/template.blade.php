@@ -26,9 +26,17 @@
             body{
                 font-family: 'Open Sans', Arial, sans-serif;
             }
-            footer{
-                margin: 4em 0;
+            .body{
+                padding-top:8em;
             }
+            footer{
+                font-size:0.8em;
+                position: absolute;
+                bottom: 30px;
+                width: 100%;
+                height: 60px;
+            }
+            
         </style>
 
 

@@ -1,4 +1,4 @@
-<footer class="text-center">
+<footer class="card-footer text-muted  text-center">
 
     <p> &copy; {{date('Y')}} &middot; {{config('app.name')}} by @Angilye &dash; Communauté MoH </p>
     
