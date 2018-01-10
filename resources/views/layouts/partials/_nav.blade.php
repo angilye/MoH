@@ -10,7 +10,7 @@
                 <a class="nav-link" href="{{ route('root_path') }}">Acceuil </a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Arma 3</a>
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Arma 3</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown03">
                 <a class="dropdown-item" href="#">serveur</a>
                 <a class="dropdown-item" href="#">stats</a>
@@ -34,12 +34,30 @@
             <input class="form-control" type="text" placeholder="Search">
         </form>
         <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Login </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Register</a>
-            </li>
+            <!-- Authentication Links -->
+            @guest
+                <li class="nav-item">
+                    <a class="nav-link {{ set_active_route('contact_path') }}" href="{{ route('login') }}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ set_active_route('contact_path') }}" href="{{ route('register') }}">Register</a>
+                </li>
+            @else
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown03">
+                            <a class="dropdown-item"
+                            href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                            Logout
+                            </a>
+                        </div>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+            @endguest
         </ul>
         
     </div>
