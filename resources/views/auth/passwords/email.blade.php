@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('template', ['title' => 'Email' ])
 
 @section('content')
 <div class="container">

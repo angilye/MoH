@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('template', ['title' => 'Reset Pass' ])
 
 @section('content')
 <div class="container">

@@ -24,7 +24,7 @@
     
         <style>
             body{
-                font-family: 'Open Sans', Arial, sans-serif;
+                font-family: 'Open Sans', Arial, sans-serif !important; 
             }
             .body{
                 padding-top:8em;
@@ -32,13 +32,14 @@
             footer{
                 font-size:0.8em;
                 position: absolute;
-                bottom: 30px;
+                bottom: 0px;
                 width: 100%;
                 height: 60px;
             }
             
         </style>
 
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     </head>
 

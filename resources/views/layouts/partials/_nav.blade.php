@@ -29,36 +29,44 @@
             <li class="nav-item {{ set_active_route('about_path') }}">
                 <a class="nav-link " href="{{ route('about_path') }}">About</a>
             </li>
+            
         </ul>
-        <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Search">
-        </form>
-        <ul class="nav navbar-nav navbar-right">
-            <!-- Authentication Links -->
+        <ul class="navbar-nav navbar-right">
+        <!-- Authentication Links -->
             @guest
                 <li class="nav-item">
-                    <a class="nav-link {{ set_active_route('contact_path') }}" href="{{ route('login') }}">Login</a>
+                    <a class="nav-link {{ set_active_route('login') }}" href="{{ route('login') }}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ set_active_route('contact_path') }}" href="{{ route('register') }}">Register</a>
+                    <a class="nav-link {{ set_active_route('register') }}" href="{{ route('register') }}">Register</a>
                 </li>
             @else
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</a>
+                        
                         <div class="dropdown-menu" aria-labelledby="dropdown03">
+                            @if (Auth::user()->adminlevel > 1)
+                                <a class="dropdown-item" href="{{ route('gestion_path') }}">Administration</a>
+                            @endif
+                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item"
                             href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                             Logout
                             </a>
+                            
                         </div>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form>
                     </li>
             @endguest
+            <form class="form-inline my-2 my-md-0">
+                <input class="form-control" type="text" placeholder="Search">
+            </form>
         </ul>
+        
         
     </div>
 </nav>
