@@ -17,17 +17,25 @@ class ContactController extends Controller
 
     public function store(ContactRequest $request)
     {
+        $messageb = $request->all();
         
+        if($messageb['url'] === null)
+        {
+            $messageb['url'] = 'Non fournie';
+        }
+
         // regle de validation dans ContactRequest au niveau de APP
-        $message = ContactMessage::create($request->all());
+        
+        $message = ContactMessage::create($messageb);
 
-        $mailable = new ContactMessageCreated($message);
+        
+         $mailable = new ContactMessageCreated($message);
 
-        Mail::to( config('moh.admin_support_email') )->send($mailable);
+         Mail::to( config('moh.admin_support_email') )->send($mailable);
 
-        flashy()->success('Votre rapport a bien été transmis, merci de votre aide.');
+         flashy()->success('Votre rapport a bien été transmis, merci de votre aide.');
 
-        return redirect()->route('root_path');
+         return redirect()->route('root_path');
         
     }
 }
