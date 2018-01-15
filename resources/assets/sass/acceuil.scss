@@ -3,7 +3,7 @@ body {
 }
 
 .body{
-  padding-top: $espace-entre-menu_texte-acceuil;
+  padding-top: 2em;
 }
 
 #text_acceuil
@@ -32,7 +32,7 @@ body {
 
 #fond_acceuil
 {
-  background-color: $fond-texte-acceuil-warzone;
+//  background-color: $fond-texte-acceuil-warzone;
   border-radius: 10px;
   opacity:0.97;
 }
@@ -54,4 +54,8 @@ body {
 .taille28
 {
   font-size:28px;
+}
+
+select#raison.form-control{
+  height: 36px;
 }
