@@ -19,7 +19,7 @@ class CreateContactMessagesTable extends Migration
             $table->String('email');
             $table->String('raison');
             $table->String('importance');
-            $table->String('url');
+            $table->String('url')->default('null');
             $table->text('message');
             $table->boolean('validation')->default(false);
             $table->String('progression')->default('null');
