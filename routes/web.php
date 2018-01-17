@@ -23,6 +23,13 @@ Route::get('/contact', 'ContactController@create')->name('contact_path');
 Route::post('/contact', 'ContactController@store')->name('contact_path');
 
 
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/steam', 'Auth\RegisterController@createsteam')->name('steam_path');
+
+Route::get('/gestion', 'AdminController@gestion')->name('gestion_path');
+
+Route::get('/index', 'AdminController@index')->name('index_path');
+
+
