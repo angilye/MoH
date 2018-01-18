@@ -13,8 +13,8 @@
         <title>{{ page_title($title ?? '')}}</title> <!-- appel de la fonction dans le fichier "helpers" et test de si la variable title existe ( si non = '' )-->
 
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-        
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+-->
 
         <!-- FontAwesome ajout d'icone-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,14 +26,8 @@
             body{
                 font-family: 'Open Sans', Arial, sans-serif !important; 
             }
-            .body{
-                padding-top:8em;
-            }
             footer{
                 font-size:0.8em;
-                position: absolute;
-                bottom: 0px;
-                width: 100%;
                 height: 60px;
             }
             
