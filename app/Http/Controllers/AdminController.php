@@ -10,11 +10,11 @@ class AdminController extends Controller
     public function gestion()
     {
         $users = DB::table('users')->get();
-        return view('admin.gestion', ['users' => $users]);
+        return view('page.Admingestion', ['users' => $users]);
     }
 
     public function index()
     {
-        return view('admin.index');
+        return view('pages.Adminindex');
     }
 }
