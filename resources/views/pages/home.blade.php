@@ -1,6 +1,8 @@
 @extends('template', ['title' => 'Home' ])
 
 @section('content')
+
+
 <div class="container">
     <div class="body">
  
@@ -31,6 +33,12 @@
                         <br>
                         <span class="taille28" >(You can still access certain features)</span> 
                         <br>
+                        
+                        
+                        @isset($_SESSION['steamid'])
+                            {{$steamprofile['steamid']}}
+                        @endisset
+                        
                     </p>
                 </div>
             </div>
