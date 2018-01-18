@@ -24,7 +24,7 @@
                         {!! $errors->first('email', '<span class="invalid-feedback">:message</span>') !!}
                     </div>
 
-                    <div class="form-group ">
+                    <div class="form-group">
                         <label for="raison" class="control-label {{ $errors->has('raison') ? 'text-danger' : '' }}">Raison :</label><br />
                         <select name="raison" id="raison" class="form-control {{ $errors->has('raison') ? 'is-invalid' : '' }}" required="required">
                             <option value="" disabled selected>-Select-</option>

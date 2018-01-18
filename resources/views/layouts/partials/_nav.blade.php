@@ -33,6 +33,7 @@
         </ul>
         <ul class="navbar-nav navbar-right">
         <!-- Authentication Links -->
+        
             @guest
                 <li class="nav-item">
                     <a class="nav-link {{ set_active_route('login') }}" href="{{ route('login') }}">Login</a>
