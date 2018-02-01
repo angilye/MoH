@@ -23,7 +23,7 @@
                 @foreach ($pages as $pages)
                     <tr>
                         <td>{!! $pages->id !!}</td>
-                        <td class="text-primary"><strong>{!! $pages->SelectLang !!}</strong></td>
+                        <td class="text-primary"><strong>{!! $pages->selectLang !!}</strong></td>
                         <td>{!! $pages->parent !!}</td>
                         <td class="text-primary"><strong>{!! $pages->title !!}</strong></td>
                         <td>{!! link_to_route('page.show', 'Voir', [$pages->id], ['class' => 'btn btn-success btn-block']) !!}</td>
