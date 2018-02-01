@@ -60,8 +60,8 @@ class adminPagesController extends Controller
      */
     public function show($id)
     {
-        $pages = DB::table('pages')->where('title', 'Arma3')->first();
-        return view('pages.arma', compact('pages'));
+        $pages = DB::table('pages')->where('title', 'Warzone')->first();
+        return view('pagesWarzone.warzone', compact('pages'));
     }
 
     /**
@@ -86,7 +86,6 @@ class adminPagesController extends Controller
      */
     public function update(PagesUpdateAdminRequest $request, $id)
     {
-        dd($request);
         $this->PagesRepository->update($id, $request->all());
 
         flashy()->success('Votre page à bien été mis à jour.');
