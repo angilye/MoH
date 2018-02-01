@@ -37,8 +37,8 @@ class HelpersTest extends TestCase
         $this->assertEquals('active', set_active_route('root_path')); // on test la fonction avec comme argument ****
         $this->assertEquals('', set_active_route('about_path')); // on test la fonction avec comme argument ****
 
-        $this->get(route('contact_path'));
-        $this->assertEquals('active', set_active_route('contact_path'));
+        $this->get(route('contactSend_path'));
+        $this->assertEquals('active', set_active_route('contactSend_path'));
         $this->assertEquals('', set_active_route('about_path'));
         $this->assertEquals('', set_active_route('root_path'));
     }

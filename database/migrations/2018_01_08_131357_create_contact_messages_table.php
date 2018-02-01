@@ -22,7 +22,7 @@ class CreateContactMessagesTable extends Migration
             $table->String('url')->default('null');
             $table->text('message');
             $table->boolean('validation')->default(false);
-            $table->String('progression')->default('null');
+            $table->String('progression')->default(0);
             $table->timestamps();
         });
     }

@@ -9,8 +9,8 @@ class ContactMessage extends Model
 {
     protected $fillable = ['name', 'email', 'raison', 'importance', 'url', 'message', 'validation', 'progression'];
 
-    public function scopeValidateBug(Builder $query) // essaie creation scope pour nouvelle commande artisan
-    {
-        $query->where('validation','=',1); 
-    }
+    // public function scopeValidateBug(Builder $query) // essaie creation scope pour nouvelle commande artisan
+    // {
+    //     $query->where('validation','=',1); 
+    // }
 }

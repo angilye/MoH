@@ -15,6 +15,11 @@ class ContactController extends Controller
         return view('contacts.create');
     }
 
+    public function createWarzone()
+    {
+        return view('pagesWarzone.contacts.createTicket');
+    }
+
     public function store(ContactRequest $request)
     {
         $messageb = $request->all();
@@ -36,6 +41,30 @@ class ContactController extends Controller
          flashy()->success('Votre rapport a bien été transmis, merci de votre aide.');
 
          return redirect()->route('root_path');
+        
+    }
+
+    public function storeWarzone(ContactRequest $request)
+    {
+        $messageb = $request->all();
+        
+        if($messageb['url'] === null)
+        {
+            $messageb['url'] = 'Non fournie';
+        }
+
+        // regle de validation dans ContactRequest au niveau de APP
+        
+        $message = ContactMessage::create($messageb);
+
+        
+         $mailable = new ContactMessageCreated($message);
+
+         Mail::to( config('moh.admin_support_email') )->send($mailable);
+
+         flashy()->success('Votre rapport a bien été transmis, merci de votre aide.');
+
+         return redirect()->route('warzonefr_path');
         
     }
 }

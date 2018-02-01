@@ -8,7 +8,7 @@
                 <h2>Get In Touch</h2>
                 <p class="text-muted">If you havin trouble, please contact us with this form.</p>
                 
-                <form action="{{ route('contact_path') }}" method="POST">
+                <form action="{{ route('contactSend_path') }}" method="POST">
 
                     {{ csrf_field() }} <!-- Token de securité -->
 
@@ -36,6 +36,9 @@
                             <option value="glitch">Glitch</option>
                             <option value="bug">Bug</option>
                             <option value="connexion-serv">Rejoindre Serveur</option>
+                            <optgroup label="-----">
+                            <option value="bug">Autre</option>
+
                         </select>
                         {!! $errors->first('raison', '<span class="invalid-feedback">:message</span>') !!}
                     </div>

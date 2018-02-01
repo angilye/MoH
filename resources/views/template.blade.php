@@ -24,11 +24,36 @@
     
         <style>
             body{
-                font-family: 'Open Sans', Arial, sans-serif !important; 
+                font-family: 'Open Sans', Arial, sans-serif !important;
+                background-image: url("img/Courverture2.png");
+                background-size: cover;
+                background-repeat: no-repeat;
             }
             footer{
                 font-size:0.8em;
                 height: 60px;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+
+            /* permet d'afficher une popup d'indication */
+            .menu a span{
+                position:absolute;
+                margin-top:25px;
+                margin-left:-55px;
+                color:#09c;
+                background:rgba(0,0,0,.9);
+                padding:15px;
+                border-radius:3px;
+                box-shadow:0 0 2px rgba(0,0,0,.5);
+                transform:scale(0) rotate(-12deg);
+                transition:all .25s;
+                opacity:0;        
+            }
+            a:hover span, a:focus span{
+                transform:scale(1) rotate(0);
+                opacity:1;        
             }
             
         </style>
@@ -43,8 +68,8 @@
 
 
         @yield('content')
-
-        @include('layouts/partials/_footer')
+        
+        <!-- @include('layouts/partials/_footer')
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -54,6 +79,6 @@
         
         <script src="//code.jquery.com/jquery.js"></script>
         @include('flashy::message')
-
+        
     </body>
 </html>
