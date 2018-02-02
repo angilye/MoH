@@ -76,7 +76,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto mx-auto">
                         <li class="nav-item {{ set_active_route('root_path') }}"> <!-- Permet de definir l'onglet actif grace a la fonction situe dans helpers -->
-                            <a class="nav-link h1" href="{{ route('root_path') }}"><img src="/img/favicon.png" width="50" height="50" alt="">Bienvenue chez la M|o|H<img src="/img/favicon.png" width="50" height="50" alt=""></a>
+                            <a class="nav-link h1" href="{{ route('root_path') }}"><img src="https://cdn.discordapp.com/attachments/355823189072543751/382717068358844417/MoH_Airsoft_N4_Blanc_Final.png" width="50" height="50" alt="">Bienvenue chez la M|o|H<img src="https://cdn.discordapp.com/attachments/355823189072543751/382717068358844417/MoH_Airsoft_N4_Blanc_Final.png" width="50" height="50" alt=""></a>
                         </li>
                     </ul>
                 </div>
