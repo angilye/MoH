@@ -48,6 +48,8 @@ Auth::routes();
 
 Route::get('/steam', 'Auth\RegisterController@createsteam')->name('steam_path');
 
+
+
  //administration
 
 Route::get('/index', 'AdminController@index')->name('indexAdmin_path');
@@ -63,6 +65,7 @@ Route::get('/index', 'AdminController@index')->name('indexAdmin_path');
     //gestionContact dans administration
 
     Route::resource('ticket', 'adminContactController');
+
 
     
 
