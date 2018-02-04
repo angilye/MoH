@@ -52,7 +52,7 @@ Route::get('/steam', 'Auth\RegisterController@createsteam')->name('steam_path');
 
  //administration
 
-Route::get('/index', 'AdminController@index')->name('indexAdmin_path');
+Route::get('/index', 'AdminController@index')->name('indexAdmin_path')->middleware('can:before,App\User');
 
     //gestionUser dans administration
 
