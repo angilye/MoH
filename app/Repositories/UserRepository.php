@@ -24,7 +24,8 @@ class UserRepository
 		
 		$user->name = $inputs['name'];
 		$user->email = $inputs['email'];	
-		$user->adminlevel = $inputs['adminlevel'];	
+		$user->adminlevel = $inputs['adminlevel'];
+		$user->role = $inputs['role'];		
 
 		$user->save();
 	}
