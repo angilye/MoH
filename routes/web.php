@@ -67,6 +67,8 @@ Route::get('/index', 'AdminController@index')->name('indexAdmin_path');
     Route::resource('ticket', 'adminContactController');
 
 
+Route::post('/ajax', 'PagesController@ajax_call');
+
     
 
 

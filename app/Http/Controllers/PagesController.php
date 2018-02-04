@@ -35,4 +35,13 @@ class PagesController extends Controller
         // dd($pages);
         return view('pagesWarzone.warzone', ['pages' => $pages]);
     }
+
+    public function ajax_call()
+    {
+    
+	$nb_users = DB::table('users')->count();
+	$nb_users = json_encode($nb_users);
+    return $nb_users;
+    
+    }
 }
