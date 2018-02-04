@@ -41,6 +41,19 @@
 							</select>
 							{!! $errors->first('adminlevel', '<span class="invalid-feedback">:message</span>') !!}
                     	</div>
+						<div class="form-group">
+							<label for="role" class="control-label {{ $errors->has('role') ? 'text-danger' : '' }}">role :</label><br />
+							<select name="role" id="role" class="form-control {{ $errors->has('role') ? 'is-invalid' : '' }}" required="required">
+								<option value="inscrit">Inscrit</option>
+								<option value="membre">Membre</option>
+								<option value="editeur site">Editeur site</option>
+								<option value="moderateur">Moderateur</option>
+								<option value="developpeur">Developpeur</option>
+								<option value="admin">Admin</option>
+								<option value="superadmin">SuperAdmin</option>
+							</select>
+							{!! $errors->first('role', '<span class="invalid-feedback">:message</span>') !!}
+						</div>
 						{!! Form::submit('Envoyer', ['class' => 'btn btn-primary pull-right']) !!}
 					{!! Form::close() !!}
 				</div>
