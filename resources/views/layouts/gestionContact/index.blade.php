@@ -31,16 +31,3 @@
 </div>
 <!-- /.box -->
 @endforeach
-
-<script> 
-$("#more_com").click(function(){
-     
-    $.ajax({
-       url : '/ticket/', // La ressource ciblée
-       type : 'GET' // Le type de la requête HTTP.
-       data : 'utilisateur=' + nom_user;
-    });
-   
-});
-
-</script>

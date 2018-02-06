@@ -111,4 +111,13 @@ class adminUsersController extends Controller
         flashy()->error("L'utilisateur " . $id . " a été supprimé.");
 		return back();
     }
+
+    public function ajax_call()
+    {
+    
+	$nb_users = DB::table('users')->count();
+	$nb_users = json_encode($nb_users);
+    return $nb_users;
+    
+    }
 }
