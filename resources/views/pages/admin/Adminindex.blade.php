@@ -88,7 +88,7 @@ footer {
                             <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Arma 3 <span class="badge badge-info">1</span></a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Future</a>
+                            <a class="dropdown-item" href="a3.moh-warzone.fr">Gestion Serveur</a>
                             </div>
                     </ul>
                 </li>

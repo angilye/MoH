@@ -1,3 +1,11 @@
+<style>
+    .login{
+        margin-right:30px;
+    }
+    .dropLogin{
+        margin-right:40px;
+    }
+</style>
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark menu">
     <a class="navbar-brand" href="{{ route('acceuil_path') }}">{{config('app.name')}}</a> <!-- Recupere le nom de l'application dans le fichier .Env -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +39,7 @@
             </li>
             
         </ul>
-        <ul class="navbar-nav navbar-right">
+        <ul class="navbar-nav navbar-right login">
         <!-- Authentication Links -->
         
             @guest
@@ -42,7 +50,7 @@
                     <a class="nav-link {{ set_active_route('register') }}" href="{{ route('register') }}">Register</a>
                 </li>
             @else
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown dropLogin">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}</a>
                         
                         <div class="dropdown-menu" aria-labelledby="dropdown03">

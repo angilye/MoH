@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Builder;
 
 class ContactMessage extends Model
 {
-    protected $fillable = ['name', 'email', 'raison', 'importance', 'url', 'message', 'validation', 'progression'];
+    protected $fillable = ['name', 'pseudo', 'email', 'raison', 'importance', 'url', 'message', 'validation', 'progression'];
 
     // public function scopeValidateBug(Builder $query) // essaie creation scope pour nouvelle commande artisan
     // {

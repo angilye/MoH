@@ -25,7 +25,6 @@ class ContactRequest extends FormRequest
     {
         return [
             'name' => 'required|min:3',
-            'email' => 'required|email',
             'raison' => 'required|not_in:0|in:navigation,inscription,connexion,glitch,bug,connexion-serv',
             'importance' => 'required|in:1,2,3,4,5',
             'message' => 'required|min:10'

@@ -16,7 +16,7 @@ class pages extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'contend'
+        'title', 'contend', 'sousTitre'
     ];
 
     /**

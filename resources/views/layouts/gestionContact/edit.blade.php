@@ -188,7 +188,7 @@ input[type="range"]:after {
 						</div>
 				@endswitch
 				<hr>
-				<p> <u><b>Poster par:</b></u>  <strong class="h5">{!! $contact->name !!} </strong> <br> le {!! $contact->created_at->format('d/m \\à H:i') !!}</p>
+				<p> <u><b>Poster par:</b></u>  <strong class="h5">{!! $contact->name !!} ( {!! $contact->pseudo !!} ) </strong> <br> le {!! $contact->created_at->format('d/m \\à H:i') !!}</p>
 				<hr>
 			
 				<fieldset class="form-group ">

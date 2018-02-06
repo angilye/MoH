@@ -9,7 +9,8 @@ class PagesController extends Controller
 {
     public function home()
     {
-        return view('acceuilSite');
+        $pages = DB::table('pages')->where('title', 'Annonce')->first();
+        return view('acceuilSite', ['pages' => $pages]);
     }
 
     public function moh()
@@ -36,12 +37,5 @@ class PagesController extends Controller
         return view('pagesWarzone.warzone', ['pages' => $pages]);
     }
 
-    public function ajax_call()
-    {
     
-	$nb_users = DB::table('users')->count();
-	$nb_users = json_encode($nb_users);
-    return $nb_users;
-    
-    }
 }

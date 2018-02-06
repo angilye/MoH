@@ -5,7 +5,7 @@
     <style>
 .test{
     background-color: rgba(63, 63, 63, 0.9);
-    margin-top:5%;
+    margin-top:2%;
     border-radius: 5px;
     font-family:'Arial';
 }
@@ -31,9 +31,15 @@ h1{
                         {!! $errors->first('name', '<span class="invalid-feedback">:message</span>') !!} <!-- si une error name mettre le message de l'erreur-->
                     </div>
 
+                    <div class="form-group "> 
+                        <label for="pseudo" class="control-label {{ $errors->has('pseudo') ? 'text-danger' : '' }}">Pseudo IG</label><!-- si une error name mettre la classe "text-danger"-->
+                        <input type="text" name="pseudo" id="pseudo" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" value="{{ old('pseudo') }}"><!-- si une error name mettre la classe "is-invalid" et la fonction old permet en cas d'erreur de recuperer l'ancienne saisie-->
+                        {!! $errors->first('pseudo', '<span class="invalid-feedback">:message</span>') !!} <!-- si une error name mettre le message de l'erreur-->
+                    </div>
+
                     <div class="form-group ">
                         <label for="email" class="control-label {{ $errors->has('email') ? 'text-danger' : '' }}">Email</label>
-                        <input type="email" name="email" id="email" class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" required="required" value="{{ old('email') }}">
+                        <input type="email" name="email" id="email" class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" value="{{ old('email') }}">
                         {!! $errors->first('email', '<span class="invalid-feedback">:message</span>') !!}
                     </div>
 

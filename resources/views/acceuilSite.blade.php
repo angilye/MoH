@@ -35,7 +35,7 @@
                 width: 100%;
             }
             .imageCentre {
-                margin-top:170px;
+                margin-top:60px;
             }
             .nav-acceuil{
                 background-color: rgba(52, 58, 64, 0.8);
@@ -63,6 +63,30 @@
                 transform:scale(1) rotate(0);
                 opacity:1;        
             }
+            #annonce{
+                color:red;
+            }
+            @media screen {
+                .entete img{
+                    width:4%;
+                    height:4%;
+                }
+                a img{
+                    width:50%;
+                };
+            }
+            @media(max-width: 1024px)
+            {   
+                .menu a span{
+                    margin-left:-65%;
+                }
+                .imageCentre{
+                    margin-top:10px;
+                }
+                a img{
+                    width:100%;
+                };
+            }
             
         </style>
 
@@ -76,14 +100,17 @@
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto mx-auto">
                         <li class="nav-item {{ set_active_route('root_path') }}"> <!-- Permet de definir l'onglet actif grace a la fonction situe dans helpers -->
-                            <a class="nav-link h1" href="{{ route('root_path') }}"><img src="https://cdn.discordapp.com/attachments/355823189072543751/382717068358844417/MoH_Airsoft_N4_Blanc_Final.png" width="50" height="50" alt="">Bienvenue chez la M|o|H<img src="https://cdn.discordapp.com/attachments/355823189072543751/382717068358844417/MoH_Airsoft_N4_Blanc_Final.png" width="50" height="50" alt=""></a>
+                            <a class="entete nav-link h1 text-center" href="{{ route('root_path') }}"><img src="https://cdn.discordapp.com/attachments/355823189072543751/382717068358844417/MoH_Airsoft_N4_Blanc_Final.png" alt="">Bienvenue chez la M|o|H<img src="https://cdn.discordapp.com/attachments/355823189072543751/382717068358844417/MoH_Airsoft_N4_Blanc_Final.png" width="50" height="50" alt=""></a>
                         </li>
                     </ul>
                 </div>
             </nav>
+            
             <div class="imageCentre menu">
-                <a href="{{ route('warzonefr_path') }}"><img width="50%" class="rounded float-left mx-auto warzone" src="img/fondwarzone.png" alt="test"><span>Site {{env('mod')}}</span></a>
-                <a href="{{ route('root_path') }}"><img width="50%" class="rounded float-right mx-auto" src="img/Couverture1.png" alt=""><span>Site {{config('app.name')}}</span></a>
+                <h2 id="annonce" class="text-center"><b>{!! $pages->contend !!}</b></h2>
+                <br><br><br>
+                <a href="{{ route('warzonefr_path') }}"><img class="rounded float-left mx-auto" src="img/Couverturewarzone.png" alt=""><span>Site {{env('mod')}}</span></a>
+                <a href="{{ route('root_path') }}"><img class="rounded float-right mx-auto" src="img/Couverture1.png" alt=""><span>Site {{config('app.name')}}</span></a>
             </div>
         
         @include('layouts/partials/_footer')

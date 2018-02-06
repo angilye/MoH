@@ -18,6 +18,7 @@ class PagesRepository
 	{
 		
 		$pages->title = $inputs['title'];
+		$pages->sousTitre = $inputs['sousTitre'];
 		$pages->contend = $inputs['contend'];
 
 		$pages->save();

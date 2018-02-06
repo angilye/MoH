@@ -10,23 +10,30 @@
     font-family:'Arial';
 }
 span{
-    color:red;
+    color:#1E90FF;
 }
 h1{
     font-size:40px;font-weight:bold;color:#ffffff;
-}
-.red{
-    color:red
 }
 
 </style>
 
 <div class="row">
     <div class="col-md-4 offset-md-4 text-center text-white test">
+    
         <br>
         <img src="http://warzone-multi-gaming.fr/FRANCE0.jpg?v=5g27ao84gvrpd" alt="">
         <br>
+        
+        <br>
+
+        <h2>{!! $pages->sousTitre !!}</h2>
+
+
         {!! $pages->contend !!}
+
+        <br><br>
+
     </div>
 </div>
 

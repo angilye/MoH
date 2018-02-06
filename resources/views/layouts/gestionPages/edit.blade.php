@@ -5,12 +5,19 @@
     	<br>
 		<div class="panel panel-primary">	
 			<div class="panel-heading">Modification d'une Page</div>
+			<br>
 			<div class="panel-body"> 
 				<div class="col-sm-12">
 					{!! Form::model($pages, ['route' => ['page.update', $pages->id], 'method' => 'put', 'class' => 'form-horizontal panel']) !!}
 					<div class="form-group {!! $errors->has('title') ? 'has-error' : '' !!}">
+						<label for="contend">Titre :</label>
 					  	{!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'title']) !!}
 					  	{!! $errors->first('title', '<small class="help-block">:message</small>') !!}
+					</div>
+					<div class="form-group {!! $errors->has('sousTitre') ? 'has-error' : '' !!}">
+						<label for="contend">Sous Titre :</label>
+					  	{!! Form::text('sousTitre', null, ['class' => 'form-control', 'placeholder' => 'Sous Titre']) !!}
+					  	{!! $errors->first('sousTitre', '<small class="help-block">:message</small>') !!}
 					</div>
                     <div class="form-group">
                         <label for="contend">Contenu :</label>

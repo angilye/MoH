@@ -29,6 +29,14 @@ class ContactController extends Controller
             $messageb['url'] = 'Non fournie';
         }
 
+        if($messageb['pseudo'] === null)
+        {
+            $messageb['pseudo'] = 'Non fournie';
+        }
+        if($messageb['email'] === null)
+        {
+            $messageb['email'] = 'Non fournie';
+        }
         // regle de validation dans ContactRequest au niveau de APP
         
         $message = ContactMessage::create($messageb);
@@ -51,6 +59,14 @@ class ContactController extends Controller
         if($messageb['url'] === null)
         {
             $messageb['url'] = 'Non fournie';
+        }
+        if($messageb['pseudo'] === null)
+        {
+            $messageb['pseudo'] = 'Non fournie';
+        }
+        if($messageb['email'] === null)
+        {
+            $messageb['email'] = 'Non fournie';
         }
 
         // regle de validation dans ContactRequest au niveau de APP
