@@ -51,23 +51,27 @@ Route::get('/steam', 'Auth\RegisterController@createsteam')->name('steam_path');
 
 
  //administration
+route::group(['middleware' => 'can:accessAdminpanel'], function() {
+    
+    Route::get('/index', 'AdminController@index')->name('indexAdmin_path');
 
-Route::get('/index', 'AdminController@index')->name('indexAdmin_path')->middleware('can:before,App\User');
+        //gestionUser dans administration
 
-    //gestionUser dans administration
+        Route::resource('user', 'adminUsersController');
 
-    Route::resource('user', 'adminUsersController');
+        //gestionPages dans administration
 
-    //gestionPages dans administration
+        Route::resource('page', 'adminPagesController');
 
-    Route::resource('page', 'adminPagesController');
+        //gestionContact dans administration
 
-    //gestionContact dans administration
-
-    Route::resource('ticket', 'adminContactController');
+        Route::resource('ticket', 'adminContactController');
 
 
-Route::post('/ajax', 'PagesController@ajax_call');
+    Route::post('/ajax', 'adminUsersController@ajax_call');
+
+});
+
 
     
 

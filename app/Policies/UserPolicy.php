@@ -19,6 +19,16 @@ class UserPolicy
 
     }
 
+    public function accesAdmin(User $user, $ability) {
+
+        if($user->isSuperAdmin()) {
+
+            return true;
+            
+        }
+
+    }
+
     /**
      * Determine whether the user can view the model.
      *

@@ -27,7 +27,19 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function role($role) {
+
+        $role = (array)$role;
+        return in_array($this->role, $role);
+    }
+    
     public function isSuperAdmin() {
         return $this->role === 'superadmin';
     }
+
+    public function isAdmin() {
+        return $this->role(['superadmin', 'admin']);
+    }
+
+
 }
