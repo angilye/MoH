@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'UIDSteam', 'email', 'password', 'adminlevel', 'role'
+        'name', 'AuthViaSteam', 'UIDSteam', 'email', 'password', 'adminlevel', 'role'
     ];
 
     /**
