@@ -35,9 +35,12 @@
                         <br>
                         
                         
-                        @isset($_SESSION['steamid'])
-                            {{$steamprofile['steamid']}}
-                        @endisset
+                        <!-- @isset($_SESSION['steamid'])
+                            {{$_SESSION['steam_steamid']}}
+                            {{$_SESSION['steam_personaname']}}
+                            <img src="{{$_SESSION['steam_avatarfull']}}" alt="">
+                            
+                        @endisset -->
                         
                     </p>
                 </div>
