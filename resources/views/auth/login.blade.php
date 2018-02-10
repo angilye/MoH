@@ -2,9 +2,6 @@
 
 @section('content')
 
-@php
-require 'steamauth/steamauth.php'
-@endphp
 
 <div class="container">
     <div class="row justify-content-md-center mt-5">
