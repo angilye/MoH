@@ -28,7 +28,10 @@
             "database/factories"
         ],
         "files":[
-            "app/helpers.php"
+            "app/helpers.php",
+            "app/SteamAuth/steamauth.php",
+            "app/SteamAuth/SteamConfig.php",
+            "app/SteamAuth/userinfo.php"
         ],
         "psr-4": {
             "App\\": "app/"

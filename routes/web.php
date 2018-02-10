@@ -46,7 +46,7 @@ Route::post('/ticketWarzone', 'ContactController@storeWarzone')->name('ticketSen
 
 Auth::routes();
 
-Route::get('/steam', 'Auth\RegisterController@createsteam')->name('steam_path');
+Route::get('/steam', 'Auth\RegisterSteamController@handle')->name('AuthSteam_path');
 
 
 
