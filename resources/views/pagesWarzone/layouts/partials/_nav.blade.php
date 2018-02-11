@@ -7,8 +7,11 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample03">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item {{ set_active_route('root_path') }}"> <!-- Permet de definir l'onglet actif grace a la fonction situe dans helpers -->
+                <li class="nav-item {{ set_active_route('warzonefr_path') }}"> <!-- Permet de definir l'onglet actif grace a la fonction situe dans helpers -->
                     <a class="nav-link" href="{{ route('warzonefr_path') }}">Acceuil </a>
+                </li>
+                <li class="nav-item {{ set_active_route('updatefr_path') }}"> <!-- Permet de definir l'onglet actif grace a la fonction situe dans helpers -->
+                    <a class="nav-link" href="{{ route('updatefr_path') }}">Updates </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle disabled" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Le serveur <span>En cours d'implémentation</span></a>

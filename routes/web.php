@@ -28,6 +28,12 @@ Route::get('/arma', 'PagesController@arma')->name('arma_path');
 
 Route::get('/warzone', 'PagesController@warzonefr')->name('warzonefr_path');
 
+Route::get('/update', 'PagesController@update')->name('updatefr_path');
+
+Route::get('/update/{id}', 'PagesController@updateshow')->name('showupdatefr_path');
+
+
+
 
 
  //Prise de contact
@@ -66,6 +72,10 @@ route::group(['middleware' => 'can:accessAdminpanel'], function() {
         //gestionContact dans administration
 
         Route::resource('ticket', 'adminContactController');
+
+        //gestionUpdate dans administration
+
+        Route::resource('updates', 'adminUpdateController');
 
 
     Route::post('/ajax', 'adminUsersController@ajax_call');
