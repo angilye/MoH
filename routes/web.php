@@ -28,6 +28,12 @@ Route::get('/arma', 'PagesController@arma')->name('arma_path');
 
 Route::get('/warzone', 'PagesController@warzonefr')->name('warzonefr_path');
 
+Route::get('/update', 'PagesController@update')->name('updatefr_path');
+
+Route::get('/update/{id}', 'PagesController@updateshow')->name('showupdatefr_path');
+
+
+
 
 
  //Prise de contact
