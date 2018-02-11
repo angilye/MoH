@@ -65,23 +65,23 @@ footer {
                     <ul class="nav flex-column collapse in " id="userMenu">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Setting</a>
                             <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-                            <a class="dropdown-item" href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Messages <span class="badge badge-info">4</span></a></li>
+                            <a class="dropdown-item" href="{{ route('acceuil_path') }}"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                            <!-- <a class="dropdown-item" href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Messages <span class="badge badge-info">4</span></a></li>
                             <a class="dropdown-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i> Options</a></li>
                             <a class="dropdown-item" href="#"><i class="fa fa-comment" aria-hidden="true"></i> Shoutbox</a></li>
                             <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i> Staff List</a></li>
-                            <a class="dropdown-item" href="#"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Rules</a></li>
+                            <a class="dropdown-item" href="#"><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Rules</a></li> -->
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#"><i class="fa fa-power-off" aria-hidden="true"></i> Logout</a></li>
                             </div>
                     </ul>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#">Reports</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
-                </li>
+                </li> 
                 <li class="nav-item dropdown">
                     <ul class="nav flex-column collapse in " id="userMenu">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Serveur</a>
@@ -91,7 +91,7 @@ footer {
                             <a class="dropdown-item" href="a3.moh-warzone.fr">Gestion Serveur</a>
                             </div>
                     </ul>
-                </li>
+                </li> -->
             </ul>
 
             <hr>
@@ -102,10 +102,12 @@ footer {
 
             <ul class="nav flex-column nav-pills">
                 <li class="nav-header"></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-briefcase" aria-hidden="true"></i> Toolbox</a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-link" aria-hidden="true"></i> Widgets</a></li>
-                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list-alt" aria-hidden="true"></i> Reports</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ route('page.index') }}"><i class="fa fa-book" aria-hidden="true"></i> Pages</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('updates.index') }}"><i class="fa fa-list-alt" aria-hidden="true"></i> Gestion Update</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('user.index') }}"><i class="fa fa-user" aria-hidden="true"></i> Gestion Membres</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-briefcase" aria-hidden="true"></i> Toolbox</a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-link" aria-hidden="true"></i> Widgets</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="{{ route('ticket.index') }}"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Gestion Ticket</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('page.index') }}"><i class="fa fa-book" aria-hidden="true"></i> Gestion Pages</a></li>
             </ul>
 
             <hr>
