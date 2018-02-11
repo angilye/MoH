@@ -73,6 +73,10 @@ route::group(['middleware' => 'can:accessAdminpanel'], function() {
 
         Route::resource('ticket', 'adminContactController');
 
+        //gestionUpdate dans administration
+
+        Route::resource('updates', 'adminUpdateController');
+
 
     Route::post('/ajax', 'adminUsersController@ajax_call');
 

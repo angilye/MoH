@@ -122,7 +122,7 @@
                         <td style="width:10%; padding-top:28px;">
                             {!! Form::open(['method' => 'DELETE', 'route' => ['ticket.destroy', $contact->id]]) !!}
                                 <a href="ticket\{!! $contact->id !!}\edit" class="btn btn-warning" ><i class="fa fa-wrench" aria-hidden="true"></i></a>
-                                {!! Form::submit('&#x274C;', ['class' => 'btn btn-danger', 'onclick' => 'return confirm(\'Vraiment supprimer cet utilisateur ?\')']) !!}
+                                {!! Form::submit('&#x274C;', ['class' => 'btn btn-danger', 'onclick' => 'return confirm(\'Vraiment supprimer ce ticket ?\')']) !!}
                             {!! Form::close() !!}
                         </td>
                     </tr>
