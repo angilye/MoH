@@ -1,6 +1,25 @@
 @extends('pages.admin.AdminIndex')
 
 @section('gestion')
+
+	<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=g9rkhbsr6lun80yy0ctdu5crs4gyxesj4rcf8cc53p5jx3xp"></script>
+  	<script>
+	  	tinymce.init({
+		selector: 'textarea',
+		height: 400,
+		menubar: false,
+		plugins: [
+			'advlist autolink lists link image charmap print preview anchor textcolor',
+			'searchreplace visualblocks code fullscreen',
+			'insertdatetime media table contextmenu paste code help wordcount'
+		],
+		toolbar: 'insert | undo redo |  formatselect | bold italic backcolor  | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+		content_css: [
+			'//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+			'//www.tinymce.com/css/codepen.min.css']
+		});
+	</script>
+
 	<div class="offset-sm-2 col-sm-6">
 		<br>
 		<div class="panel panel-primary">	
@@ -50,4 +69,6 @@
 			<span class="glyphicon glyphicon-circle-arrow-left"></span> Retour
 		</a>
 	</div>
+
+	
 @endsection
