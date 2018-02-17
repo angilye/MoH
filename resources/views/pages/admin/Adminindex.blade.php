@@ -52,6 +52,8 @@ footer {
 }
 </style>
 
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
 <!-- Main -->
 <div class="container-fluid indexAdmin">
     <div class="row">
@@ -108,6 +110,7 @@ footer {
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-link" aria-hidden="true"></i> Widgets</a></li> -->
                 <li class="nav-item"><a class="nav-link" href="{{ route('ticket.index') }}"><i class="fas fa-ticket-alt" aria-hidden="true"></i> Gestion Ticket</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('page.index') }}"><i class="fa fa-book" aria-hidden="true"></i> Gestion Pages</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('gallerieImage_path') }}"><i class="fas fa-images"></i> Gallerie image</a></li>
             </ul>
 
             <hr>

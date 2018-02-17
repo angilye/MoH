@@ -40,11 +40,11 @@ Route::get('/update/{id}', 'PagesController@updateshow')->name('showupdatefr_pat
 
 Route::get('/contact', 'ContactController@create')->name('contactSend_path');
 
-Route::post('/contact', 'ContactController@store')->name('contactSend_path');
+Route::post('/contact', 'ContactController@store');
 
 Route::get('/ticketWarzone', 'ContactController@createWarzone')->name('ticketSend_path');
 
-Route::post('/ticketWarzone', 'ContactController@storeWarzone')->name('ticketSend_path');
+Route::post('/ticketWarzone', 'ContactController@storeWarzone');
 
 
 
@@ -77,10 +77,19 @@ route::group(['middleware' => 'can:accessAdminpanel'], function() {
 
         Route::resource('updates', 'adminUpdateController');
 
+        //gestion galerie d'image dans administration
+
+        Route::get('image-gallery', 'ImageGalleryController@index')->name('gallerieImage_path');
+        Route::post('image-gallery', 'ImageGalleryController@upload');
+        Route::delete('image-gallery/{id}', 'ImageGalleryController@destroy');
+
 
     Route::post('/ajax', 'adminUsersController@ajax_call');
 
 });
+
+
+
 
 
     
