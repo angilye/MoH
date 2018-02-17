@@ -60,8 +60,25 @@ class adminPagesController extends Controller
      */
     public function show($id)
     {
-        $pages = DB::table('pages')->where('title', 'Warzone')->first();
-        return view('pagesWarzone.warzone', compact('pages'));
+        $pages = DB::table('pages')->where('id', $id)->first();
+//        dd($pages);
+        foreach ($pages as $test) {
+
+            if ($pages->partieSite == 'warzone') {
+
+                return view('pagesWarzone.'.$pages->page, compact('pages'));
+
+            }elseif ($pages->partieSite == 'moh'){
+
+                return view('pages.'.$pages->page, compact('pages'));
+
+            }elseif ($pages->partieSite == ''){
+
+                return view($pages->page, compact('pages'));
+
+            }
+
+        }
     }
 
     /**
@@ -90,7 +107,7 @@ class adminPagesController extends Controller
 
         flashy()->success('Votre page à bien été mis à jour.');
 
-        return redirect()->route('indexAdmin_path');
+        return redirect()->action('adminPagesController@index');
     }
 
     /**
