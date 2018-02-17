@@ -28,6 +28,7 @@ h1{
         <br>
 
         <h2>{!! $pages->sousTitre !!}</h2>
+        <br>
 
 
         {!! $pages->contend !!}

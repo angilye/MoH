@@ -19,6 +19,8 @@ class PagesTableSeeder extends Seeder
                 'id' => 1,
                 'selectLang' => 'FR',
                 'title' => 'Arma 3',
+                'page' => 'arma',
+                'partieSite' => 'moh',
                 'parent' => 'arma3',
                 'sousTitre' => '§§',
                 'contend' => 'A remplir',
@@ -30,6 +32,8 @@ class PagesTableSeeder extends Seeder
                 'id' => 2,
                 'selectLang' => 'EN',
                 'title' => 'arma3',
+                'page' => 'arma',
+                'partieSite' => 'moh',
                 'parent' => 'arma3',
                 'sousTitre' => '§§',
                 'contend' => 'A remplir',
@@ -41,20 +45,17 @@ class PagesTableSeeder extends Seeder
                 'id' => 3,
                 'selectLang' => 'FR',
                 'title' => 'Warzone',
+                'page' => 'warzone',
+                'partieSite' => 'warzone',
                 'parent' => 'warzone',
-                'sousTitre' => 'Le retour de <span>Red</span>Line ! ',
+                'sousTitre' => 'L Ouverture de notre serveur <span>MoH</span>.WarZone! <br>',
                 'contend' => '
-                                <br>
-                                Basé sur Wasteland[wasteland.arma.su], le mod RedLine se veut plus teamplay, plus organisé; on quitte la survie pour entrer dans la guerre, la vraie ! 
-                                <br><br>
-                                Sans être un serveur Rôle-Play, l’équipe vise est une forte coopération entre joueurs. Que ça soit en infanterie ou en véhicule mais également avec les unités de support. Pour conquérir la map (et ainsi gagner de l’argent), il faut capturer les zones représentés par des villes, des bases militaires ou autres.
-                                <br><br>
-                                En attaques frontales ou en embuscades meurtrières, en s’infiltrant derrière les lignes ennemies, à vous de faire mal à l’adversaire. Chaque camp dispose d’une base sécurisée avec tout le matériel nécessaire.
-                                <br><br>
-                                Les missions aléatoires Wasteland sont également présentes, avec leurs lots de récompenses et de loots. L’équipe peut intervenir à tous moments via la faction indé grâce à “Zeus”. 
-                                <br><br>
-                                Teamplay,combat, fun… RedLine !
-                                <br><br>
+                                <p>Nous sommes tr&egrave;s heureux de vous annoncer l&rsquo;ouverture de notre nouveau Mod de jeu Warzone, n&eacute;e de cette fameuse mission multijoueur PvP/PvE ( un wasteland am&eacute;lior&eacute;).</p>
+                                <p>Bas&eacute; sur un travail d\'&eacute;quipe solide entre les joueurs, confrontant 2 a 3 factions : Force des USA , Russe et Les Independant ! L\'&eacute;quipe M.O.H a pour projet de reconstruire une communaut&eacute; solide et nombreuse autour de ce nouveau mod de jeu Warzone !</p>
+                                <p>Les serveurs sont pr&ecirc;ts, les bugs que nous avons pu observer sont r&eacute;solus, bien s&ucirc;r si vous en observez d\'autres pr&eacute;venez nous afin de les corriger. Des mises &agrave; jours seront &eacute;videmment &agrave; pr&eacute;voir, nous comptons tout faire afin d\'am&eacute;liorer Warzone de jour en jour !</p>
+                                <p>Il ne nous manque plus qu\'une chose : VOUS ! Oui, nous avons besoin de vous, derri&egrave;re votre &eacute;cran . Alors n\'h&eacute;sitez pas &agrave; nous rejoindre, c\'est ainsi que nous esp&eacute;rons retrouver une communaut&eacute; !</p>
+                                <p>Le Discord pour jouer afin de garantir une coop&eacute;rations entre vous : https://discord.gg/vK3eJrR <br />Le Site : https://www.moh-warzone.fr/</p>
+                                <p><br /><br /></p>
                             ',
 
             ],
@@ -64,6 +65,8 @@ class PagesTableSeeder extends Seeder
                 'id' => 4,
                 'selectLang' => 'EN',
                 'title' => 'Warzone',
+                'page' => 'warzone',
+                'partieSite' => 'warzone',
                 'parent' => 'warzone',
                 'sousTitre' => '§§',
                 'contend' => 'A remplir',
@@ -75,6 +78,8 @@ class PagesTableSeeder extends Seeder
                 'id' => 5,
                 'selectLang' => 'FR',
                 'title' => 'Annonce',
+                'page' => 'acceuilSite',
+                'partieSite' => '',
                 'parent' => 'Acceuil',
                 'sousTitre' => '',
                 'contend' => '',

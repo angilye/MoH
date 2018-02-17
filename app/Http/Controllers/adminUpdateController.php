@@ -100,7 +100,7 @@ class adminUpdateController extends Controller
     {
         $this->updateRepository->update($id, $request->all());
 		flashy()->success("L'update " . $request->input('title') . " a été modifié.");
-		return redirect('/index');
+        return redirect()->action('adminUpdateController@index');
     }
 
     /**
