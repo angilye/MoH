@@ -92,7 +92,7 @@ class adminContactController extends Controller
     {
         $this->ContactRepository->update($id, $request->all());
 		flashy()->success("Le ticket n°" . $id . " a été modifié.");
-		return redirect('/index');
+        return redirect()->action('adminContactController@index');
     }
 
     /**

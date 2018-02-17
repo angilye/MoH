@@ -55,7 +55,7 @@ class adminUsersController extends Controller
     {
 		$user = $this->userRepository->store($request->all());
         flashy()->success("L'utilisateur " . $user->name . " a été créé.");
-        return redirect('/index');
+        return redirect()->action('adminUsersController@index');
         
     }
 
@@ -96,7 +96,7 @@ class adminUsersController extends Controller
     {
         $this->userRepository->update($id, $request->all());
 		flashy()->success("L'utilisateur " . $request->input('name') . " a été modifié.");
-		return redirect('/index');
+        return redirect()->action('adminUsersController@index');
     }
 
     /**
