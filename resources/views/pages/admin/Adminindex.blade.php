@@ -83,17 +83,19 @@ footer {
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
-                </li> 
+                </li>  -->
                 <li class="nav-item dropdown">
                     <ul class="nav flex-column collapse in " id="userMenu">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Serveur</a>
                             <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Arma 3 <span class="badge badge-info">1</span></a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="a3.moh-warzone.fr">Gestion Serveur</a>
+                            <a class="dropdown-item" href="a3.moh-warzone.fr/startServer.php">Start Serveur</a>
+                            <a class="dropdown-item" href="a3.moh-warzone.fr/stopServer.php">Stop Serveur</a>
+                            <a class="dropdown-item" href="a3.moh-warzone.fr/restartServer.php">Restart Serveur</a>
                             </div>
                     </ul>
-                </li> -->
+                </li>
             </ul>
 
             <hr>
