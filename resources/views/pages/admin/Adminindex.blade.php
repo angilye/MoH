@@ -90,9 +90,9 @@ footer {
                             <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Arma 3 <span class="badge badge-info">1</span></a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="a3.moh-warzone.fr/startServer.php">Start Serveur</a>
-                            <a class="dropdown-item" href="a3.moh-warzone.fr/stopServer.php">Stop Serveur</a>
-                            <a class="dropdown-item" href="a3.moh-warzone.fr/restartServer.php">Restart Serveur</a>
+                                <a class="dropdown-item" href="http://a3.moh-warzone.fr/startServer.php">Start Serveur</a>
+                                <a class="dropdown-item" href="http://a3.moh-warzone.fr/stopServer.php">Stop Serveur</a>
+                                <a class="dropdown-item" href="http://a3.moh-warzone.fr/restartServer.php">Restart Serveur</a>
                             </div>
                     </ul>
                 </li>
