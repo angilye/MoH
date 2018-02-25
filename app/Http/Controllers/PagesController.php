@@ -39,13 +39,13 @@ class PagesController extends Controller
 
     public function update()
     {
-        $pages = DB::table('updates')->get();
+        $pages = DB::table('update')->get();
         return view('pagesWarzone.updates', ['pages' => $pages]);
     }
 
     public function updateshow($id)
     {
-        $pages = DB::table('updates')->where('id', $id )->first();
+        $pages = DB::table('update')->where('id', $id )->first();
         return view('pagesWarzone.update', compact('pages'));
     }
 
